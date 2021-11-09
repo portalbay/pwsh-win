@@ -2,36 +2,46 @@
 Set-Alias -Name gim -Value Get-InstalledModule
 
 function b{
-		vim $PROFILE
+	vim $PROFILE
 }
 
 function sb {
-		. $profile
+	. $profile
 }
 
 function install_vbh_modules
 {
-		Install-Module -Name AzureAD
-			Install-Module -Name ExchangeOnlineManagement
-				Install-Module -Name Microsoft.Graph
+	Install-Module -Name AzureAD
+	Install-Module -Name ExchangeOnlineManagement
+	Install-Module -Name Microsoft.Graph
 }
 
 function me {
 		(iwr ifconfig.me).content
 }
 
+function myip{
+	$pubip = wget ifconfig.me
+	$prvip = Test-Connection -ComputerName (hostname) -Count 1	
+	$prvip = $prvip.IPV4Address.IPAddressToString
+	$h = hostname
+	Write-Host "IPv4 Public: $pubip" -ForegroundColor green -BackgroundColor blue
+	Write-Host "IPv4 Local: $prvip" -ForegroundColor green -BackgroundColor blue
+	Write-Host ("Hostname: " + $h ) -ForegroundColor green -BackgroundColor blue
+}
+
 function ifconfig {
-		ipconfig 
+	ipconfig 
 }
 
 
 function fx {
-		        start firefox '-P'
+	start firefox '-P'
 }
 
 
 function dt {
-		cd  ($ENV:onedrive + "\Desktop")
+	cd  ($ENV:onedrive + "\Desktop")
 }
 
 function wp {
