@@ -8,6 +8,15 @@ function b{
 function sb {
 	. $profile
 }
+	
+function .win {
+	cd ($ENV:onedrive + "\Documents\WindowsPowerShell\.win")
+}
+
+function pb {
+        vim.exe ($ENV:onedrive + "\Documents\WindowsPowerShell\.win\public_profile.ps1")
+}
+
 
 function install_vbh_modules
 {
