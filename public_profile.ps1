@@ -94,6 +94,12 @@ function update_env()
 	gitpull
 }
 
+function azcon{
+	Connect-AzureAD 
+}
+
+
 #Functions to run 
 #update_env
+
 
