@@ -17,7 +17,8 @@ function install_vbh_modules
 }
 
 function me {
-		(iwr ifconfig.me).content
+		#(iwr ifconfig.me).content
+	myip
 }
 
 function myip{
