@@ -1,4 +1,12 @@
-#
+
+if (Get-Variable 'powershell_work_directory' -ErrorAction 'Ignore') {
+	  #Write-Host "loading.." + $powershell_work_directory
+} else {
+	Write-Host "powershell_work_directory needs defined in your $profile file"
+	Exit
+}
+
+
 Set-Alias -Name gim -Value Get-InstalledModule
 
 function b{
@@ -77,3 +85,14 @@ function gitpull{
 	git fetch
 	git pull
 }
+
+function update_env()
+{
+	Write-Host "Updating .win powershell scripts."
+	cd  $powershell_work_directory
+	gitpull
+}
+
+#Functions to run 
+update_env
+
