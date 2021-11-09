@@ -10,11 +10,11 @@ function sb {
 }
 	
 function .win {
-	cd ($ENV:onedrive + "\Documents\WindowsPowerShell\.win")
+	cd ($powershell_work_directory)
 }
 
 function pb {
-        vim.exe ($ENV:onedrive + "\Documents\WindowsPowerShell\.win\public_profile.ps1")
+        vim.exe ($powershell_work_directory + "public_profile.ps1")
 }
 
 
@@ -66,4 +66,14 @@ function azpass ($azUserID)
 	Connect-AzureAD
 	$Secure = Read-Host "Enter New Password" -AsSecureString
 	Set-AzureADUserPassword -ObjectId $azUserID -Password $Secure
+}
+
+
+function gitpush{
+	git push origin main
+}
+
+function gitpull{
+	git fetch
+	git pull
 }
