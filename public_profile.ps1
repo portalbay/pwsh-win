@@ -88,7 +88,8 @@ function gitpull{
 
 function update_env()
 {
-	Write-Host "Updating .win powershell scripts."
+	Write-Host "Welcome back $env:UserName don't work too hard.." -ForegroundColor green
+	Write-Host "Updating .win powershell scripts." -ForegroundColor red
 	cd  $powershell_work_directory
 	gitpull
 }
