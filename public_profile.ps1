@@ -95,5 +95,5 @@ function update_env()
 }
 
 #Functions to run 
-update_env
+#update_env
 
