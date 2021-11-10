@@ -86,6 +86,11 @@ function gitpull{
 	git pull
 }
 
+function gillpull_allow_unrelated_histories{
+
+	git pull --allow-unrelated-histories
+}
+
 function update_env()
 {
 	Write-Host "Welcome back $env:UserName don't work too hard.." -ForegroundColor green
@@ -99,7 +104,9 @@ function azcon{
 }
 
 
+
 #Functions to run 
 #update_env
+
 
 
