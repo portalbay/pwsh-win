@@ -62,6 +62,10 @@ function dt {
 	cd  ($ENV:onedrive + "\Desktop")
 }
 
+function doc {
+	        cd  ($ENV:onedrive + "\Documents")
+}
+
 function wp {
 	cd  ($ENV:onedrive + "\Documents\WindowsPowerShell")
 
@@ -76,6 +80,11 @@ function azpass ($azUserID)
 	Set-AzureADUserPassword -ObjectId $azUserID -Password $Secure
 }
 
+
+function gitgo ($note) {
+	git commit -m $note
+	gitpush
+}
 
 function gitpush{
 	git push origin main
