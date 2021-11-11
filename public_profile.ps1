@@ -28,9 +28,16 @@ function pb {
 
 function install_vbh_modules
 {
-	Install-Module -Name AzureAD
-	Install-Module -Name ExchangeOnlineManagement
-	Install-Module -Name Microsoft.Graph
+	Install-Module -Name AzureAD -Scope CurrentUser
+	Install-Module -Name ExchangeOnlineManagement -Scope CurrentUser
+	Install-Module -Name Microsoft.Graph -Scope CurrentUser
+	 Install-Module MSOnline -Scope CurrentUser
+}
+
+function search_module_path($name)
+{
+
+	(Get-Module -ListAvailable $name*).path
 }
 
 function me {
@@ -110,6 +117,14 @@ function update_env()
 
 function azcon{
 	Connect-AzureAD 
+}
+
+function az_check_liscense{
+	$valSkuPartNo = @('ENTERPRISEPACK','EXCHANGEDESKLESS','AAD_PREMIUM_P2','INTUNE_A','SPE_E3','SPE_E3')
+	#Get-AzureADSubscribedSku | Select -Property Sku*,ConsumedUnits -ExpandProperty PrepaidUnits |  Where-Object { $_.SkuPartNumber -in $valSkuPartNo } | Format-Table -AutoSize
+	$azu_license_counts = Get-AzureADSubscribedSku |Select -Property SkuPartNumber,ConsumedUnits -ExpandProperty PrepaidUnits |  Where-Object { $_.SkuPartNumber -in $valSkuPartNo } | Out-String
+	Get-AzureADSubscribedSku | Select -Property SkuPartNumber,ConsumedUnits -ExpandProperty PrepaidUnits |  Where-Object { $_.SkuPartNumber -in $valSkuPartNo } | Format-Table -AutoSize
+	Write-Host ($azu_license_counts)
 }
 
 
