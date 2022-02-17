@@ -134,3 +134,8 @@ function az_check_liscense{
 
 
 
+
+function get_ssid_creds($ssid) {
+	netsh wlan show profile name=$ssid key=clear
+
+}
