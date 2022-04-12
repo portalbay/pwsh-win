@@ -2,7 +2,13 @@
 Set-Alias -Name gim -Value Get-InstalledModule
 
 function b{
-	vim $PROFILE
+	if ($local_profile_script){
+		vim $local_profile_script
+	}
+	else {
+		vim $PROFILE
+	}
+	
 }
 
 function sb {
