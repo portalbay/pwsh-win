@@ -14,7 +14,8 @@ function b{
 }
 
 function sb {
-	. $profile
+	#. $profile
+	Write-Host("Type .$profile to reload your profile settings. I belive this is a security setting and I've not been able to make this work from a script, sorry!")
 }
 	
 function .win {
