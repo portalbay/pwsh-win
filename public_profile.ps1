@@ -127,6 +127,13 @@ function az_check_liscense{
 	Write-Host ($azu_license_counts)
 }
 
+function az_install_modules
+{
+        Install-Module -Name AzureAD
+        Install-Module -Name ExchangeOnlineManagement
+        #Install-Module -Name Microsoft.Graph
+}
+
 #Wirelss Functions Here
 function get_ssid_creds($ssid) {
 	netsh wlan show profile name=$ssid key=clear
