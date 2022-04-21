@@ -1,7 +1,7 @@
 # .win
 Windows PowerShell Environment Settings
 
-# Project Title
+# PowerShell Profile, Public.
 
 Powershell Profile Public
 
