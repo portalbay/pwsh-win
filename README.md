@@ -28,15 +28,17 @@ WARNING: Please be cautious when editing environment variables in your system, t
 
 ### Executing program
 
-* Load powershell
+* Load powershell, edit your $PROFILE settings to load the script
 
 ```
->notepad $PROFI>E
+>notepad $PROFILE
 ADD:
+ #Set variable to path of clone repo, .win folder.
  $powershell_work_directory = "C:\path\to\.win\"
  #Loads public profile store in the .win directory
  . $powershell_work_directory
 ```
+* Restart powershell
 
 ## Help
 
