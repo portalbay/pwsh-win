@@ -10,9 +10,9 @@ Powershell Profile Public
 A powershell profile with alias and useful functions to make terminal life a bit simpler. 
 The most useful short handed commands here are the 'b' and 'sb' commands. 
 ```
-b allows you to open the public profile with 'b' and quicky edit the settings.
-sb will show the command to reload your profile with the updated changes. 
-pb will open the public powershell profile settings to modify
+#b allows you to open the public profile with 'b' and quicky edit the settings using vim.exe in windows.
+#sb will show the command to reload your profile with the updated changes in vim.
+#pb will open the public powershell profile settings to modify in vim.
 ```
 
 ## Getting Started
