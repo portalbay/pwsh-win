@@ -33,9 +33,9 @@ WARNING: Please be cautious when editing environment variables in your system, t
 ```
 >notepad $PROFILE
 ADD:
- #Set variable to path of clone repo, .win folder.
+ #Set variable to path of cloned repo, .win folder.
  $powershell_work_directory = "C:\path\to\.win\"
- #Loads public profile store in the .win directory
+ #Loads public profile stored in the .win directory
  . $powershell_work_directory
 ```
 * Restart powershell
