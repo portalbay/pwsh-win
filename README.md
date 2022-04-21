@@ -15,9 +15,15 @@ A powershell profile with alias and useful functions to make terminal life a bit
 
 * Any version of powershell
 * Recommend powershell 7.x using latest Stable Build of Windows Terminal
-* I use Vim as my terminal text editor. You would need to install VIM and make sure vim.exe is in your System's Path Variables
-** >$ENV:Path
-** Example: C:\Program Files (x86)\Vim\vim82\
+* I use Vim as my terminal text editor. You would need to install VIM and make sure vim.exe is in your Users or System's Path Variable
+
+```
+$ENV:Path
+WARNING: Please be cautious when editing environment variables in your system, to be safe use User PATH, not System.
+#Example:<other path data> C:\Program Files (x86)\Vim\vim82\<other path data>
+```
+
+
  
 
 ### Executing program
@@ -25,14 +31,18 @@ A powershell profile with alias and useful functions to make terminal life a bit
 * Load powershell
 
 ```
-code blocks for commands
+>notepad $PROFI>E
+ADD:
+ $powershell_work_directory = "C:\path\to\.win\"
+ #Loads public profile store in the .win directory
+ . $powershell_work_directory
 ```
 
 ## Help
 
 Any advise for common problems or issues.
 ```
-command to run if program contains helper info
+Google errors, drop me comment with questions. 
 ```
 
 ## Authors
