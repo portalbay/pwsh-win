@@ -2,7 +2,7 @@
 if (Get-Variable 'powershell_work_directory' -ErrorAction 'Ignore') {
 	  #Write-Host "loading.." + $powershell_work_directory
 } else {
-	Write-Host "powershell_work_directory needs defined in your $profile file"
+	Write-Host "powershell_work_directory needs defined in your $PROFILE settings file."
 	Exit
 }
 
