@@ -53,6 +53,31 @@ Any advise for common problems or issues.
 Google errors, drop me comment with questions. 
 ```
 
+## Other Neat commands to include
+```
+function proxy {
+        ssh -D port -q -C -N host@server
+}
+
+function weather{
+        cls
+        (curl http://wttr.in/"Dayton, Ohio" -UserAgent "curl" ).Content  -Replace 'Follow|@igor_chubin|for|wttr.in|in|updates',''
+}
+
+function moon{
+        (curl wttr.in/moon).content -Replace 'Follow|@igor_chubin|for|wttr.in|in|updates',''
+}
+
+function webdev { wt -w 0 nt  --tabColor "#33ffd4" --title "Web-Dev!" ssh user@host}
+function webprod { wt -w 0 nt  --tabColor "#fd0905" --title "Web-Prod!" ssh user@host}
+
+function deploywebdev{
+        ssh user@host 'cd /var/www/html; git fetch;git pull'
+}
+
+
+```
+
 ## Authors
 
 Contributors names and contact info
