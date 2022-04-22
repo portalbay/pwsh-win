@@ -139,3 +139,22 @@ function get_ssid_creds($ssid) {
 	netsh wlan show profile name=$ssid key=clear
 
 }
+
+
+function get_hash($file, $algorithm)
+{
+	#MD2	MD2 message-digest algorithm
+	#MD4	MD4 message-digest algorithm
+	#MD5	MD5 message-digest algorithm
+	#SHA1	SHA-1 secure hash algorithm 1 (160 bit)
+	#SHA256	SHA-2 256-bit secure hash algorithm
+	#SHA384	SHA-2 384-bit secure hash algorithm
+	#SHA512	SHA-2 512-bit secure hash algorithm
+	if($algorithm -eq $null)
+	{
+		$algorithm = "MD5"
+	}
+
+	certutil -hashfile $file $algorithm
+}
+
