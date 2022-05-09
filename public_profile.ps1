@@ -164,3 +164,9 @@ function get_hash($file, $algorithm)
 	certutil -hashfile $file $algorithm
 }
 
+
+function getDNSCache()
+{
+
+        Get-DnsClientCache | Format-Table -AutoSize
+}
