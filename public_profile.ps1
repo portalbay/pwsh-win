@@ -109,6 +109,13 @@ function update_env()
 	gitpull
 }
 
+function add_pub_key($hostatserver)
+{
+	type $env:USERPROFILE\.ssh\id_rsa.pub | ssh $hostatserver "cat >> .ssh/authorized_keys"
+	
+}
+
+
 #Azure Functions here
 
 
