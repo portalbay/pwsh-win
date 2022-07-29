@@ -177,3 +177,8 @@ function getDNSCache()
 
         Get-DnsClientCache | Format-Table -AutoSize
 }
+
+function resolve_txt($domain)
+{
+	Resolve-DnsName $domain -Type TXT
+}
